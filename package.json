@@ -4,8 +4,8 @@
   "description": "Nook - Wooden Phone Storage Box | Digital Wellness for Families",
   "main": "server.js",
   "scripts": {
-    "start": "node server-new.js",
-    "dev": "node server-new.js",
+    "start": "node server.js",
+    "dev": "node server.js",
     "build": "echo 'No build step required for static site'",
     "vercel-build": "echo 'No build step required for static site'"
   },
@@ -20,7 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
-    "compression": "^1.7.4"
+    "compression": "^1.7.4",
+    "stripe": "^14.21.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"

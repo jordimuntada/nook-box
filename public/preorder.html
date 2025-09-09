@@ -151,7 +151,9 @@
                     </div>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="oak_edition">Oak Edition</h3>
                     <p class="text-gray-600 mb-6" data-i18n="oak_description">Warm, classic European oak with natural grain patterns</p>
-                    <div class="text-3xl font-bold text-walnut mb-6">€89</div>
+                    <div class="text-3xl font-bold text-walnut mb-2">€89</div>
+                    <div class="text-sm text-gray-600 mb-2" data-i18n="deposit_amount">Deposit: €8.90 (10%)</div>
+                    <div class="text-sm text-gray-500 mb-6" data-i18n="remaining_amount">Remaining: €80.10 (Dec 2025)</div>
                     <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm mb-6" data-i18n="preorder_available">Pre-order Available</div>
                     <button class="w-full bg-oak text-white py-3 rounded-full hover:bg-walnut transition-colors" onclick="preorderProduct('oak')" data-i18n="preorder_now">
                         Pre-order Now
@@ -165,7 +167,9 @@
                     </div>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="walnut_edition">Walnut Edition</h3>
                     <p class="text-gray-600 mb-6" data-i18n="walnut_description">Rich, dark American walnut with deep character</p>
-                    <div class="text-3xl font-bold text-walnut mb-6">€99</div>
+                    <div class="text-3xl font-bold text-walnut mb-2">€99</div>
+                    <div class="text-sm text-gray-600 mb-2" data-i18n="deposit_amount">Deposit: €9.90 (10%)</div>
+                    <div class="text-sm text-gray-500 mb-6" data-i18n="remaining_amount">Remaining: €89.10 (Dec 2025)</div>
                     <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm mb-6" data-i18n="preorder_available">Pre-order Available</div>
                     <button class="w-full bg-walnut text-white py-3 rounded-full hover:bg-gray-800 transition-colors" onclick="preorderProduct('walnut')" data-i18n="preorder_now">
                         Pre-order Now
@@ -179,7 +183,9 @@
                     </div>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="bamboo_edition">Bamboo Edition</h3>
                     <p class="text-gray-600 mb-6" data-i18n="bamboo_description">Light, sustainable bamboo with modern appeal</p>
-                    <div class="text-3xl font-bold text-walnut mb-6">€79</div>
+                    <div class="text-3xl font-bold text-walnut mb-2">€79</div>
+                    <div class="text-sm text-gray-600 mb-2" data-i18n="deposit_amount">Deposit: €7.90 (10%)</div>
+                    <div class="text-sm text-gray-500 mb-6" data-i18n="remaining_amount">Remaining: €71.10 (Dec 2025)</div>
                     <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm mb-6" data-i18n="preorder_available">Pre-order Available</div>
                     <button class="w-full bg-bamboo text-gray-800 py-3 rounded-full hover:bg-oak hover:text-white transition-colors" onclick="preorderProduct('bamboo')" data-i18n="preorder_now">
                         Pre-order Now
@@ -251,16 +257,16 @@
         </div>
     </section>
 
-    <!-- Pre-order Form -->
-    <section class="bg-white py-20">
-        <div class="container mx-auto px-6">
-            <div class="max-w-2xl mx-auto">
-                <div class="text-center mb-12 animate-on-scroll">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6" data-i18n="preorder_form_title">Secure Your Pre-order</h2>
-                    <p class="text-xl text-gray-600" data-i18n="preorder_form_subtitle">Join the waitlist and be the first to receive your Nook in December 2025</p>
-                </div>
+            <!-- Pre-order Form -->
+            <section class="bg-white py-20">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-2xl mx-auto">
+                        <div class="text-center mb-12 animate-on-scroll">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6" data-i18n="preorder_form_title">Secure Your Pre-order</h2>
+                            <p class="text-xl text-gray-600" data-i18n="preorder_form_subtitle">Pay a 10% deposit today and secure your Nook for December 2025 delivery</p>
+                        </div>
 
-                <form class="space-y-6 animate-on-scroll" id="preorder-form">
+                        <form class="space-y-6 animate-on-scroll" id="preorder-form">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="first_name">First Name</label>
@@ -344,6 +350,66 @@
         </div>
     </footer>
 
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-semibold text-gray-800" data-i18n="payment_title">Complete Your Pre-order</h3>
+                <button onclick="closePaymentModal()" class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="mb-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="flex justify-between items-center mb-2">
+                        <span data-i18n="selected_edition">Selected Edition:</span>
+                        <span id="selected-edition-name" class="font-semibold"></span>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span data-i18n="full_price">Full Price:</span>
+                        <span id="full-price" class="font-semibold"></span>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span data-i18n="deposit_amount">Deposit (10%):</span>
+                        <span id="deposit-amount" class="font-semibold text-walnut"></span>
+                    </div>
+                    <div class="border-t pt-2">
+                        <div class="flex justify-between items-center">
+                            <span data-i18n="remaining_amount">Remaining (Dec 2025):</span>
+                            <span id="remaining-amount" class="text-gray-600"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="card_number">Card Number</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-walnut focus:ring-1 focus:ring-walnut outline-none">
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="expiry_date">Expiry Date</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-walnut focus:ring-1 focus:ring-walnut outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="123" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-walnut focus:ring-1 focus:ring-walnut outline-none">
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-sm font-medium text-gray-700 mb-2" data-i18n="cardholder_name">Cardholder Name</label>
+                <input type="text" id="cardholder-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-walnut focus:ring-1 focus:ring-walnut outline-none">
+            </div>
+
+            <button onclick="processPayment()" class="w-full bg-walnut text-white py-3 rounded-lg hover:bg-oak transition-colors font-semibold" data-i18n="pay_deposit">
+                Pay Deposit
+            </button>
+        </div>
+    </div>
+
     <script>
         // Countdown timer
         function updateCountdown() {
@@ -403,12 +469,118 @@
         function preorderProduct(edition) {
             const editionNames = {
                 'oak': 'Oak Edition',
-                'walnut': 'Walnut Edition', 
+                'walnut': 'Walnut Edition',
                 'bamboo': 'Bamboo Edition'
             };
-            
-            alert(`Thank you for your interest in the ${editionNames[edition]}! Please fill out the pre-order form below to secure your Nook for December 2025 delivery.`);
-            document.getElementById('preorder-form').scrollIntoView({ behavior: 'smooth' });
+
+            const prices = {
+                'oak': 89,
+                'walnut': 99,
+                'bamboo': 79
+            };
+
+            const fullPrice = prices[edition];
+            const depositAmount = fullPrice * 0.1;
+            const remainingAmount = fullPrice - depositAmount;
+
+            // Update modal with selected edition details
+            document.getElementById('selected-edition-name').textContent = editionNames[edition];
+            document.getElementById('full-price').textContent = `€${fullPrice}`;
+            document.getElementById('deposit-amount').textContent = `€${depositAmount.toFixed(2)}`;
+            document.getElementById('remaining-amount').textContent = `€${remainingAmount.toFixed(2)}`;
+
+            // Store selected edition for payment processing
+            window.selectedEdition = edition;
+
+            // Show payment modal
+            document.getElementById('payment-modal').classList.remove('hidden');
+        }
+
+        // Close payment modal
+        function closePaymentModal() {
+            document.getElementById('payment-modal').classList.add('hidden');
+        }
+
+        // Process payment
+        async function processPayment() {
+            const cardNumber = document.getElementById('card-number').value;
+            const expiryDate = document.getElementById('expiry-date').value;
+            const cvv = document.getElementById('cvv').value;
+            const cardholderName = document.getElementById('cardholder-name').value;
+
+            // Basic validation
+            if (!cardNumber || !expiryDate || !cvv || !cardholderName) {
+                alert('Please fill in all payment details');
+                return;
+            }
+
+            // Show loading state
+            const payButton = document.querySelector('[onclick="processPayment()"]');
+            const originalText = payButton.textContent;
+            payButton.textContent = 'Processing...';
+            payButton.disabled = true;
+
+            try {
+                // Get customer info from form
+                const customerInfo = {
+                    firstName: document.querySelector('input[data-i18n-placeholder="first_name"]').value,
+                    lastName: document.querySelector('input[data-i18n-placeholder="last_name"]').value,
+                    email: document.querySelector('input[data-i18n-placeholder="email"]').value
+                };
+
+                // Create payment intent
+                const response = await fetch('/api/create-payment-intent', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        edition: window.selectedEdition,
+                        customerInfo: customerInfo
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Simulate payment processing
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+
+                    // Confirm payment
+                    const confirmResponse = await fetch('/api/confirm-payment', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            paymentIntentId: result.paymentIntent.id,
+                            customerInfo: customerInfo
+                        })
+                    });
+
+                    const confirmResult = await confirmResponse.json();
+
+                    if (confirmResult.success) {
+                        // Show success message
+                        alert(`Payment successful! Your pre-order has been confirmed. Order ID: ${confirmResult.orderId}. A confirmation email has been sent to ${confirmResult.confirmationEmail}`);
+                        
+                        // Close modal and reset form
+                        closePaymentModal();
+                        document.getElementById('preorder-form').reset();
+                    } else {
+                        alert('Payment failed. Please try again.');
+                    }
+                } else {
+                    alert('Failed to create payment intent. Please try again.');
+                }
+            } catch (error) {
+                console.error('Payment error:', error);
+                alert('Payment failed. Please try again.');
+            } finally {
+                // Reset button state
+                payButton.textContent = originalText;
+                payButton.disabled = false;
+            }
         }
 
         // Language switching functionality
