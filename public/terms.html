@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Nook | Digital Wellness for Families</title>
+    <meta name="description" content="Terms and conditions for Nook pre-orders. Learn about our refund policy, delivery timeline, and customer rights.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'oak': '#A67B5B',
+                        'walnut': '#5C4B37',
+                        'bamboo': '#E8D0A9',
+                        'natural': '#F8F6F2',
+                        'cork': '#D6B87A',
+                        'felt': '#7D8CA3'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 bg-natural min-h-screen">
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-semibold text-walnut">Nook</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/#features" class="text-gray-600 hover:text-walnut transition-colors" data-i18n="nav_features">Features</a>
+                    <a href="/#lifestyle" class="text-gray-600 hover:text-walnut transition-colors" data-i18n="nav_lifestyle">Lifestyle</a>
+                    <a href="/#pricing" class="text-gray-600 hover:text-walnut transition-colors" data-i18n="nav_pricing">Pricing</a>
+                    <a href="/#contact" class="text-gray-600 hover:text-walnut transition-colors" data-i18n="nav_contact">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <select id="language-selector" class="bg-gray-100 text-gray-700 px-3 py-1 rounded-md text-sm">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="pt">Português</option>
+                        <option value="it">Italiano</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="da">Dansk</option>
+                        <option value="ca">Català</option>
+                    </select>
+                    <a href="/preorder" class="bg-walnut text-white px-6 py-2 rounded-full hover:bg-oak transition-colors" data-i18n="preorder_now">
+                        Pre-order Now
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Terms Content -->
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+        <div class="bg-white rounded-lg shadow-sm p-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-8" data-i18n="terms_title">Terms and Conditions</h1>
+            <p class="text-gray-600 mb-8" data-i18n="terms_last_updated">Last updated: September 9, 2025</p>
+
+            <!-- Pre-order Terms -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="preorder_terms_title">Pre-order Terms</h2>
+                <div class="prose prose-gray max-w-none">
+                    <p class="mb-4" data-i18n="preorder_terms_1">By placing a pre-order for a Nook wooden phone storage box, you agree to the following terms and conditions:</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="payment_terms_title">Payment Terms</h3>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li data-i18n="payment_terms_1">No payment is required at the time of pre-order placement</li>
+                        <li data-i18n="payment_terms_2">Payment will be processed automatically on December 1st, 2025</li>
+                        <li data-i18n="payment_terms_3">You will receive a payment confirmation email before processing</li>
+                        <li data-i18n="payment_terms_4">All prices are in Euros (€) and include applicable taxes</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="delivery_terms_title">Delivery Terms</h3>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li data-i18n="delivery_terms_1">Estimated delivery: December 2025 (in time for Christmas)</li>
+                        <li data-i18n="delivery_terms_2">Delivery will be made to the address provided during pre-order</li>
+                        <li data-i18n="delivery_terms_3">You will receive tracking information once your order ships</li>
+                        <li data-i18n="delivery_terms_4">International shipping available to most European countries</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="refund_policy_title">Refund Policy</h3>
+                    <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+                        <p class="text-red-800 font-semibold" data-i18n="refund_policy_highlight">IMPORTANT: If your Nook is not completed and ready for delivery by December 31st, 2025, your payment will be automatically refunded in full within 5 business days, with no questions asked.</p>
+                    </div>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li data-i18n="refund_policy_1">Automatic refund if delivery deadline is not met</li>
+                        <li data-i18n="refund_policy_2">Refund processed within 5 business days of missed deadline</li>
+                        <li data-i18n="refund_policy_3">No cancellation fees or penalties</li>
+                        <li data-i18n="refund_policy_4">Original payment method will be used for refund</li>
+                        <li data-i18n="refund_policy_5">You may cancel your pre-order at any time before December 1st, 2025</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Product Information -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="product_info_title">Product Information</h2>
+                <div class="prose prose-gray max-w-none">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="materials_title">Materials and Craftsmanship</h3>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li data-i18n="materials_1">Handcrafted from sustainable, FSC-certified wood</li>
+                        <li data-i18n="materials_2">Available in Oak, Walnut, or Bamboo</li>
+                        <li data-i18n="materials_3">Premium felt or natural cork interior lining</li>
+                        <li data-i18n="materials_4">Magnetic closure system</li>
+                        <li data-i18n="materials_5">Hidden hinges for clean aesthetics</li>
+                        <li data-i18n="materials_6">15cm cube dimensions</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3" data-i18n="warranty_title">Warranty</h3>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li data-i18n="warranty_1">2-year warranty against manufacturing defects</li>
+                        <li data-i18n="warranty_2">Warranty covers materials and workmanship</li>
+                        <li data-i18n="warranty_3">Normal wear and tear not covered</li>
+                        <li data-i18n="warranty_4">Warranty begins on delivery date</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Customer Rights -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="customer_rights_title">Your Rights</h2>
+                <div class="prose prose-gray max-w-none">
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li data-i18n="rights_1">Right to cancel pre-order before payment processing</li>
+                        <li data-i18n="rights_2">Right to automatic refund if delivery deadline is missed</li>
+                        <li data-i18n="rights_3">Right to receive product as described</li>
+                        <li data-i18n="rights_4">Right to warranty coverage for manufacturing defects</li>
+                        <li data-i18n="rights_5">Right to contact customer service for any concerns</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Data Protection -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="data_protection_title">Data Protection</h2>
+                <div class="prose prose-gray max-w-none">
+                    <p class="mb-4" data-i18n="data_protection_1">We are committed to protecting your personal information:</p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li data-i18n="data_protection_2">Personal data used only for order processing and delivery</li>
+                        <li data-i18n="data_protection_3">No sharing of personal information with third parties</li>
+                        <li data-i18n="data_protection_4">Secure payment processing through trusted providers</li>
+                        <li data-i18n="data_protection_5">Right to request data deletion at any time</li>
+                        <li data-i18n="data_protection_6">GDPR compliant data handling</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Contact Information -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="contact_info_title">Contact Information</h2>
+                <div class="prose prose-gray max-w-none">
+                    <p class="mb-4" data-i18n="contact_info_1">For questions about these terms or your pre-order:</p>
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li data-i18n="contact_info_2">Email: support@nook-wellness.com</li>
+                        <li data-i18n="contact_info_3">Response time: Within 24 hours</li>
+                        <li data-i18n="contact_info_4">Available languages: English, Spanish, French, German, Portuguese, Italian, Dutch, Danish, Catalan</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Legal -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4" data-i18n="legal_title">Legal Information</h2>
+                <div class="prose prose-gray max-w-none">
+                    <p class="mb-4" data-i18n="legal_1">These terms and conditions are governed by European Union law and are subject to change. Any changes will be communicated to pre-order customers via email.</p>
+                    <p class="mb-4" data-i18n="legal_2">By placing a pre-order, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.</p>
+                </div>
+            </section>
+
+            <!-- Back to Pre-order -->
+            <div class="mt-8 pt-8 border-t border-gray-200">
+                <a href="/preorder" class="bg-walnut text-white px-8 py-3 rounded-full hover:bg-oak transition-colors" data-i18n="back_to_preorder">
+                    Back to Pre-order
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Nook</h3>
+                    <p class="text-gray-600" data-i18n="footer_description">Beautiful design for meaningful connections</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4" data-i18n="product">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/#features" class="text-gray-600 hover:text-walnut" data-i18n="features">Features</a></li>
+                        <li><a href="/#pricing" class="text-gray-600 hover:text-walnut" data-i18n="materials">Materials</a></li>
+                        <li><a href="/#pricing" class="text-gray-600 hover:text-walnut" data-i18n="pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4" data-i18n="support">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/terms" class="text-gray-600 hover:text-walnut" data-i18n="terms_conditions">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-walnut" data-i18n="faq">FAQ</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-walnut" data-i18n="shipping">Shipping</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-walnut" data-i18n="returns">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4" data-i18n="company">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/#contact" class="text-gray-600 hover:text-walnut" data-i18n="about">About</a></li>
+                        <li><a href="/#contact" class="text-gray-600 hover:text-walnut" data-i18n="contact">Contact</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-walnut" data-i18n="sustainability">Sustainability</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+                <p data-i18n="copyright" id="copyright-text">© YEAR Nook. All rights reserved. Handcrafted with care in Europe.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.documentElement.lang = lang;
+
+            // Update all elements with data-i18n attributes
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Store language preference
+            localStorage.setItem('nook-language', lang);
+
+            // Update copyright year after language change
+            updateCopyrightYear();
+        }
+
+        // Initialize language selector
+        const languageSelector = document.getElementById('language-selector');
+        if (languageSelector) {
+            // Load saved language preference
+            const savedLanguage = localStorage.getItem('nook-language') || 'en';
+            languageSelector.value = savedLanguage;
+            setLanguage(savedLanguage);
+
+            // Handle language change
+            languageSelector.addEventListener('change', function(e) {
+                setLanguage(e.target.value);
+            });
+        }
+
+        // Update copyright year dynamically
+        function updateCopyrightYear() {
+            const currentYear = new Date().getFullYear();
+            const copyrightElement = document.getElementById('copyright-text');
+            if (copyrightElement) {
+                const currentText = copyrightElement.textContent;
+                // Replace "YEAR" placeholder with current year
+                const updatedText = currentText.replace('YEAR', currentYear);
+                copyrightElement.textContent = updatedText;
+            }
+        }
+
+        // Update copyright year on page load
+        updateCopyrightYear();
+    </script>
+</body>
+</html>
